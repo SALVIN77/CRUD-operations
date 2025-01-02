@@ -33,11 +33,11 @@ app.listen(3005,(req,res)=>{
     console.log("port is up")
 })
 
-// app.put("/edit",(req,res)=>{
-//     console.log("req.body");
-//     tasks.splice(0,1,req.body);
-//     res.send({message:"update",tasks})
-// })
+app.put("/edit",(req,res)=>{
+    console.log("req.body");
+    tasks.splice(0,1,req.body);
+    res.send({message:"update",tasks})
+ })
 
 app.put('/tasks/:id',(req,res)=>{
     const id = req.params.id;
